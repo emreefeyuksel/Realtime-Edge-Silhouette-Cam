@@ -56,6 +56,7 @@ Unlike standard image processing scripts, **this project streams the processed v
 4.  Go to **Camera Settings** and select **"OBS Virtual Camera"** (or UnityCam) as your video source.
 5.  Enjoy your new look! Use the sliders to adjust the detail level.
 
+* **'g':** Ghost mode on/off.
 * **'q':** Quit the application.
 
 ---
@@ -105,6 +106,7 @@ Sıradan görüntü işleme projelerinden farklı olarak, **işlenmiş görünt�
 4.  **Kamera Ayarları**'na gidin ve kaynak olarak **"OBS Virtual Camera"**yı seçin.
 5.  Yeni görüntünüzün keyfini çıkarın! Detayları ayarlamak için kaydırma çubuklarını kullanın.
 
+* **'g':** Ghost modu aç/kapat.
 * **'q':** Çıkış yapmak için basın.
 
 ---
