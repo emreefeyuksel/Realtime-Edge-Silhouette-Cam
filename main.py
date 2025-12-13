@@ -6,7 +6,7 @@ from pyvirtualcam import PixelFormat
 current_mode = 2
 mode_names = {1: "Klasik Siluet", 2: "Matrix / TRON Modu", 3: "Renkli Eskiz"}
 
-# Ghost Effect Variables
+#Ghost Effect Variables
 ghost_mode = True
 prev_frame = None
 
@@ -18,8 +18,8 @@ cv2.namedWindow("Siluet Ayarlari")
 cv2.resizeWindow("Siluet Ayarlari", 600, 150)
 cv2.createTrackbar("Detay Seviyesi (Alt)", "Siluet Ayarlari", 50, 255, empty)
 cv2.createTrackbar("Ana Hatlar (Ust)", "Siluet Ayarlari", 150, 255, empty)
-cv2.createTrackbar("Cizgi Kalinligi", "Siluet Ayarlari", 2, 5, empty)  # Kalinlik 2 daha iyi durur
-cv2.createTrackbar("Iz Uzunlugu", "Siluet Ayarlari", 10, 50, empty)  # Izin ne kadar kalacagi
+cv2.createTrackbar("Cizgi Kalinligi", "Siluet Ayarlari", 2, 5, empty) 
+cv2.createTrackbar("Iz Uzunlugu", "Siluet Ayarlari", 10, 50, empty) 
 
 cap = cv2.VideoCapture(0)
 width = 640
@@ -37,7 +37,7 @@ with pyvirtualcam.Camera(width=width, height=height, fps=30, fmt=PixelFormat.BGR
         if not success:
             break
 
-        img = cv2.flip(img, 1) #Aynalama/Mirroring
+        img = cv2.flip(img, 1) #Mirroring
         imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         imgBlur = cv2.GaussianBlur(imgGray, (5, 5), 1)
 
@@ -104,3 +104,4 @@ with pyvirtualcam.Camera(width=width, height=height, fps=30, fmt=PixelFormat.BGR
 
 cap.release()
 cv2.destroyAllWindows()
+
